@@ -1,7 +1,7 @@
 package com.ks.otpservice.controller;
 
 
-import com.ks.otpservice.utils.VerificationStatusEnum;
+import com.ks.otpservice.utils.StatusEnum;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,7 +19,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class GenerateOtpCodeControllerIntegrationTest {
+public class OtpCodeControllerIntegrationTest {
 
     private MockMvc mvc;
 
@@ -34,9 +34,9 @@ public class GenerateOtpCodeControllerIntegrationTest {
     @Test
     public void getOtpCode() throws Exception {
 
-        mvc.perform(MockMvcRequestBuilders.post("/generate/otp"))
+        mvc.perform(MockMvcRequestBuilders.post("/send/otp"))
                 .andExpect(status().isOk())
-                .andExpect(content().string(VerificationStatusEnum.CODE_SENT.name()))
+                .andExpect(content().string(StatusEnum.CODE_SENT.name()))
                 .andDo(print());
     }
 }
