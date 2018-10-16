@@ -1,6 +1,6 @@
 package com.ks.otpservice.utils;
 
-public enum VerificationStatusEnum {
+public enum StatusEnum {
 
     CODE_SENT("code sent"),
 
@@ -12,6 +12,6 @@ public enum VerificationStatusEnum {
 
     ERROR("error");
 
-    VerificationStatusEnum(String verified) {
+    StatusEnum(String verified) {
     }
 }
