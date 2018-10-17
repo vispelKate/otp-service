@@ -1,4 +1,4 @@
-package repository;
+package com.ks.otpservice.repository;
 
 import com.ks.otpservice.model.User;
 import org.springframework.data.repository.CrudRepository;
