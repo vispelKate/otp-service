@@ -1,17 +1,14 @@
 package com.ks.otpservice.dto;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.Data;
 
 import java.io.Serializable;
 import java.util.UUID;
 
-@Getter
-@Setter
-@NoArgsConstructor
+@Data
 public class ServiceClientDto implements Serializable {
 
-    private String clientId;
+
+    private String clientName;
     private UUID clientSecret;
 }
